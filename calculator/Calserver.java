@@ -77,3 +77,18 @@ public class Calserver {
         }
     }
 }
+
+
+C:\Users\student\Desktop\sayak>java Calserver
+Server is running... Waiting for a client to connect...
+Client connected.
+Client has requested operation: 1
+Enter first number: 5
+Enter second number: 10
+Result sent to the client...
+
+
+
+
+
+
