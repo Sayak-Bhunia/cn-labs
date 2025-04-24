@@ -53,3 +53,23 @@ public class Calclient {
         }
     }
 }
+
+
+
+
+
+
+C:\Users\student\Desktop\sayak>java Calclient
+Type 1 for Addition
+Type 2 for Subtraction
+Type 3 for Multiplication
+Type 4 for Division
+Enter 0 to Exit
+Enter your choice: 1
+Your Result for the given operation = 15
+Type 1 for Addition
+Type 2 for Subtraction
+Type 3 for Multiplication
+Type 4 for Division
+Enter 0 to Exit
+Enter your choice:
