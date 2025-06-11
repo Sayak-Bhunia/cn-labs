@@ -1,75 +1,33 @@
-import java.io.*;
 import java.net.*;
+import java.io.*;
 import java.util.*;
 
-public class Calclient {
-    public static void main(String[] args) throws IOException {
-        // Get the local host address
-        InetAddress addr = InetAddress.getLocalHost();
+class Client {
+    public static void main(String[] args) throws Exception {
+        Socket s = new Socket("localhost", 6666);
+        DataInputStream din = new DataInputStream(s.getInputStream());
+        DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+        Scanner sc = new Scanner(System.in);
 
-        // Scanner to read user input
-        Scanner inp = new Scanner(System.in);
-
-        // Create a socket to connect to the server at port 6666
-        Socket sock = new Socket(addr, 6666);
-
-        // Input and output streams for communication
-        DataInputStream inpStrm = new DataInputStream(sock.getInputStream());
-        DataOutputStream outpStrm = new DataOutputStream(sock.getOutputStream());
-
-        try {
-            while (true) {
-                // Display menu
-                System.out.println("Type 1 for Addition");
-                System.out.println("Type 2 for Subtraction");
-                System.out.println("Type 3 for Multiplication");
-                System.out.println("Type 4 for Division");
-                System.out.println("Enter 0 to Exit");
-                System.out.print("Enter your choice: ");
-                
-                // Read operation choice from user
-                int oprtr = inp.nextInt();
-
-                // Exit condition
-                if (oprtr == 0) {
-                    break;
-                }
-
-                // Send the chosen operation to server
-                outpStrm.writeInt(oprtr);
-
-                // Receive and display result from server
-                String res = inpStrm.readUTF();
-                System.out.println("Your Result for the given operation = " + res);
-            }
-        } catch (Exception exp) {
-            System.out.println("An error occurred: " + exp.getMessage());
-        } finally {
-            // Cleanup resources
-            inp.close();
-            inpStrm.close();
-            outpStrm.close();
-            sock.close();
+        while (true) {
+            System.out.println("1 -> +");
+            System.out.println("2 -> -");
+            System.out.println("3 -> *");
+            System.out.println("4 -> /");
+            System.out.println("0 -> Exit");
+            int op = sc.nextInt();
+            dout.writeInt(op);
+            if(op == 0) break;
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            dout.writeInt(a);
+            dout.writeInt(b);
+            String res = din.readUTF();
+            System.out.println(res);
         }
+        sc.close();
+        din.close();
+        dout.close();
+        s.close();
     }
 }
-
-
-
-
-
-
-C:\Users\student\Desktop\sayak>java Calclient
-Type 1 for Addition
-Type 2 for Subtraction
-Type 3 for Multiplication
-Type 4 for Division
-Enter 0 to Exit
-Enter your choice: 1
-Your Result for the given operation = 15
-Type 1 for Addition
-Type 2 for Subtraction
-Type 3 for Multiplication
-Type 4 for Division
-Enter 0 to Exit
-Enter your choice:
