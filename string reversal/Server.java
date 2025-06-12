@@ -25,3 +25,11 @@ class Server {
         return sb.reverse().toString();
     }
 }
+
+
+C:\Users\Sayak\OneDrive\Desktop>javac Server.java
+
+C:\Users\Sayak\OneDrive\Desktop>java Server
+Client = llaw eht revo spmuj xof eht
+llaw eht revo spmuj xof eht
+
