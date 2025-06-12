@@ -31,3 +31,26 @@ class Client {
         s.close();
     }
 }
+
+
+
+C:\Users\Sayak\OneDrive\Desktop>javac Client.java
+
+C:\Users\Sayak\OneDrive\Desktop>javac Client.java
+
+C:\Users\Sayak\OneDrive\Desktop>java Client
+1 -> +
+2 -> -
+3 -> *
+4 -> /
+0 -> Exit
+2
+10
+2
+Result: 8
+1 -> +
+2 -> -
+3 -> *
+4 -> /
+0 -> Exit
+0
