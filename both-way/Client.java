@@ -21,3 +21,14 @@ class Client {
         s.close();
     }
 }
+
+
+
+C:\Users\Sayak\OneDrive\Desktop>java Client
+Client =
+hello
+Server = stop
+Client =
+stop
+
+
