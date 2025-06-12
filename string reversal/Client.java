@@ -24,3 +24,10 @@ class Client {
         return sb.reverse().toString();
     }
 }
+
+
+C:\Users\Sayak\OneDrive\Desktop>javac Client.java
+
+C:\Users\Sayak\OneDrive\Desktop>java Client
+the fox jumps over the wall
+Server = the fox jumps over the wall
