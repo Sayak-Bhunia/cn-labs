@@ -52,3 +52,15 @@ class Server {
         System.out.println("Server stopped.");
     }
 }
+
+
+C:\Users\Sayak\OneDrive\Desktop>javac Server.java
+
+C:\Users\Sayak\OneDrive\Desktop>java Server
+Server is running. Waiting for client...
+Client connected.
+Sent to client -> Result: 8
+Server stopped.
+
+C:\Users\Sayak\OneDrive\Desktop>
+
